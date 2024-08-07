@@ -28,7 +28,7 @@ void bubble_sort(int *array, size_t size)
  * @a: the number to swap with a if a is greater than b
  * @b: the number to swap with b if a is greater than b
  *
- * Returns: 1 if it swapped; 0 if not.
+ * Return: 1 if it swapped; 0 if not.
  */
 int swap_if_needed(int *a, int *b)
 {
