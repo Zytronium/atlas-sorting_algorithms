@@ -14,8 +14,8 @@ void bubble_sort(int *array, size_t size)
 	{
 		for (j = 0; j < size - 1 - i; j++)
 		{
-			swap_if_needed(&array[j], &array[j + 1]);
-			print_array(array, size);
+			if (swap_if_needed(&array[j], &array[j + 1]))
+				print_array(array, size);
 		}
 	}
 }
@@ -23,15 +23,20 @@ void bubble_sort(int *array, size_t size)
 /**
  * swap_if_needed - swaps 2 numbers if the 1st (a) is greater than the 2nd (b)
  * helper function for bubble_sort
+ *
  * @param a: the number to swap with a if a is greater than b
  * @param b: the number to swap with b if a is greater than b
+ *
+ * Returns: 1 if it swapped; 0 if not.
  */
-void swap_if_needed(int *a, int *b)
+int swap_if_needed(int *a, int *b)
 {
 	if (*a > *b)
 	{
 		int temp = *a;
 		*a = *b;
 		*b = temp;
+		return (1);
 	}
+	return (0);
 }
