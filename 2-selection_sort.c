@@ -14,13 +14,16 @@ void selection_sort(int *array, size_t size)
 	{
 		int idxOfMin = i, j;
 
-		for (j = 1; j < size; j++) /* find min num in remaining numbers */
+		for (j = i + 1; j < size; j++) /* find min num in remaining numbers */
 		{
 			if (array[j] < array[idxOfMin])
 				idxOfMin = j;
 		}
-		swap_ints(&array[i], &array[idxOfMin]);
-		print_array(array, size);
+		if (i != idxOfMin)
+		{
+			swap_ints(&array[i], &array[idxOfMin]);
+			print_array(array, size);
+		}
 	}
 }
 
