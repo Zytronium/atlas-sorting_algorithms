@@ -8,11 +8,11 @@
  */
 void selection_sort(int *array, size_t size)
 {
-	int i;
+	size_t i;
 
 	for (i = 0; i < size; i++)
 	{
-		int idxOfMin = i, j;
+		size_t idxOfMin = i, j;
 
 		for (j = i + 1; j < size; j++) /* find min num in remaining numbers */
 		{
