@@ -13,7 +13,7 @@ void insertion_sort_list(listint_t **list)
 	current = (*list)->next;
 	last = current->prev;
 
-	while (current->next)
+	while (current)
 	{
 		while (last != NULL && last->n > current->n)
 		{
@@ -32,7 +32,9 @@ void insertion_sort_list(listint_t **list)
 			print_list(*list);
 		}
 		current = current->next;
-		last = current->prev;
+		if (current)
+			last = current->prev;
+		/*dont need "else last = what current was" because it'll never be used*/
 	}
 }
 
