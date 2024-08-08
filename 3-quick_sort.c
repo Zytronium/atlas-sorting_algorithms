@@ -67,6 +67,7 @@ size_t get_pivot(int *array, size_t start, size_t end)
  * @a: the number to swap with a
  * @b: the number to swap with b
  */
+/*
 void swap_ints(int *a, int *b)
 {
 	int temp = *a;
@@ -74,3 +75,4 @@ void swap_ints(int *a, int *b)
 	*a = *b;
 	*b = temp;
 }
+*/
