@@ -17,6 +17,7 @@ void quick_sort(int *array, size_t size)
  * @array: an array of numbers to sort
  * @start: the start of the array
  * @end: the end of the array
+ * @size: size of array
  */
 void quick_sort_helper(int *array, size_t start, size_t end, size_t size)
 {
