@@ -28,10 +28,28 @@ void insertion_sort_list(listint_t **list)
 			current->next = last;
 
 			last = current->prev;
-			/* might need to find and set the new head */
+			*list = find_new_head(*list);
 			print_list(*list);
 		}
 		current = current->next;
 		last = current->prev;
 	}
+}
+
+/**
+ * find_new_head - returns the head of a doubly linked list
+ *
+ * @list: any node of the doubly linked list to find the head of
+ *
+ * Return: the head node of the given liked list
+ */
+listint_t *find_new_head(listint_t *list)
+{
+	if (list == NULL)
+		return (NULL);
+
+	if (list->prev == NULL)
+		return (list);
+
+	return (find_new_head(list->prev));
 }
