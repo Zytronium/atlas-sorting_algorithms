@@ -29,6 +29,8 @@ void bubble_sort(int *array, size_t size);
 void insertion_sort_list(listint_t **list);
 void selection_sort(int *array, size_t size);
 void quick_sort(int *array, size_t size);
+void quick_sort_helper(int *array, size_t start, size_t end, size_t size);
+size_t get_pivot(int *array, size_t start, size_t end);
 int swap_if_needed(int *a, int *b);
 void swap_ints(int *a, int *b);
 listint_t *find_new_head(listint_t *list);
