@@ -2,10 +2,10 @@
 #include <stdio.h>
 
 /**
- * insertion_sort_list - sorts a doubly linked list of integers
- * in ascending order using the Insertion sort algorithm
- * @list: pointer to head node of the doubly linked list that needs to be sorted
- */
+* insertion_sort_list - sorts a doubly linked list of integers
+* in ascending order using the Insertion sort algorithm
+* @list: pointer to head node of the doubly linked list that needs to be sorted
+*/
 void insertion_sort_list(listint_t **list)
 {
 	listint_t *current, *last;
