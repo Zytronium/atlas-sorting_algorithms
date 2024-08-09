@@ -38,6 +38,7 @@ void quick_sort_helper(int *array, size_t start, size_t end, size_t size)
  * @array: the array of numbers
  * @start: the start of the array
  * @end: the end of the array
+ * @size: the size of the array
  *
  * Return: the pivot
  */
