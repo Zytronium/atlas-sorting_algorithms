@@ -26,8 +26,7 @@ void quick_sort_helper(int *array, size_t start, size_t end, size_t size)
 	if (end <= start)
 		return;
 
-	pivot = get_pivot(array, start, end);
-	print_array(array, size);
+	pivot = get_pivot(array, start, end, size);
 	if (pivot > 0)
 		quick_sort_helper(array, start, pivot - 1, size);
 	quick_sort_helper(array, pivot + 1, end, size);
@@ -42,7 +41,7 @@ void quick_sort_helper(int *array, size_t start, size_t end, size_t size)
  *
  * Return: the pivot
  */
-size_t get_pivot(int *array, size_t start, size_t end)
+size_t get_pivot(int *array, size_t start, size_t end, size_t size)
 {
 	int pivot = array[end];
 	size_t i = start - 1, j = start;
@@ -53,6 +52,7 @@ size_t get_pivot(int *array, size_t start, size_t end)
 		{
 			i++;
 			swap_ints(&array[i], &array[j]);
+			print_array(array, size);
 		}
 		j++;
 	}
