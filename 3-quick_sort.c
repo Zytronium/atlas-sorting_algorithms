@@ -57,7 +57,11 @@ size_t get_pivot(int *array, size_t start, size_t end, size_t size)
 		j++;
 	}
 	i++;
-	swap_ints(&array[i], &array[end]); /* swap arr[i] & pivot */
+	if (i != end)
+	{
+		swap_ints(&array[i], &array[end]); /* swap arr[i] & pivot */
+		print_array(array, size);
+	}
 
 	return (i);
 }
