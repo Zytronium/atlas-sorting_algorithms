@@ -52,8 +52,11 @@ size_t get_pivot(int *array, size_t start, size_t end, size_t size)
 		if (array[j] < pivot)
 		{
 			i++;
-			swap_ints(&array[i], &array[j]);
-			print_array(array, size);
+			if (i != j)
+			{
+				swap_ints(&array[i], &array[j]);
+				print_array(array, size);
+			}
 		}
 		j++;
 	}
@@ -63,6 +66,7 @@ size_t get_pivot(int *array, size_t start, size_t end, size_t size)
 		swap_ints(&array[i], &array[end]); /* swap arr[i] & pivot */
 		print_array(array, size);
 	}
+
 
 	return (i);
 }
